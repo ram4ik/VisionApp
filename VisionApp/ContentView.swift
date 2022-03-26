@@ -16,6 +16,8 @@ struct ContentView: View {
         Text("Hello, world!")
             .onAppear {
                 sdk.getRecognizedText(image: UIImage(named: "1")!)
+                
+                sdk.getRecognizedHuman(image: UIImage(named: "1")!)
             }
     }
     
