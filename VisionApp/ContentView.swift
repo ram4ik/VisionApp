@@ -12,13 +12,21 @@ struct ContentView: View {
     
     let sdk = VisionSDK()
     
+    @State var list = [String]()
+    
     var body: some View {
-        Text("Hello, world!")
-            .onAppear {
-                sdk.getRecognizedText(image: UIImage(named: "1")!)
-                
-                sdk.getRecognizedHuman(image: UIImage(named: "1")!)
+        List {
+            ForEach(list, id: \.self) { item in
+                Text(item)
             }
+        }
+        .onAppear {
+            list = sdk.getListOfRecognizedText(image: UIImage(named: "1")!)
+            
+            sdk.getRecognizedText(image: UIImage(named: "1")!)
+            
+            sdk.getRecognizedHuman(image: UIImage(named: "1")!)
+        }
     }
     
 }
