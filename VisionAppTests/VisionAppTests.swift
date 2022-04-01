@@ -15,7 +15,7 @@ class VisionAppTests: XCTestCase {
     let differentDocuments = ["1", "2", "3", "4", "5", "6", "7"]
     
     
-    func testDifferentDocuments() throws {
+    func testTextRecognizeDifferentDocuments() throws {
         
         for document in differentDocuments {
             let list = sdk.getListOfRecognizedText(image: UIImage(named: document)!)
@@ -23,6 +23,15 @@ class VisionAppTests: XCTestCase {
             XCTAssertTrue(!list.isEmpty)
         }
         
+    }
+    
+    func testHumanRecognizeWithDifferentDocuments() throws {
+        
+        for document in differentDocuments {
+            let response: () = sdk.getRecognizedHuman(image: UIImage(named: document)!)
+            
+            print(response)
+        }
     }
 
 }
