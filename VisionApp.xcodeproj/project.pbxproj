@@ -14,6 +14,7 @@
 		953A652C27EF846C003C7480 /* VisionAppSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953A652B27EF846C003C7480 /* VisionAppSDK.framework */; };
 		953A652D27EF846C003C7480 /* VisionAppSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 953A652B27EF846C003C7480 /* VisionAppSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		953A653627EF8A0F003C7480 /* VisionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A653527EF8A0F003C7480 /* VisionAppTests.swift */; };
+		95A9334827F81F2400E46BCE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A9334727F81F2400E46BCE /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		953A652B27EF846C003C7480 /* VisionAppSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VisionAppSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		953A653327EF8A0F003C7480 /* VisionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		953A653527EF8A0F003C7480 /* VisionAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionAppTests.swift; sourceTree = "<group>"; };
+		95A9334727F81F2400E46BCE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		953A64CF27EF7300003C7480 /* VisionApp */ = {
 			isa = PBXGroup;
 			children = (
+				95A9334627F81F1100E46BCE /* helpers */,
 				953A64D027EF7300003C7480 /* VisionAppApp.swift */,
 				953A64D227EF7300003C7480 /* ContentView.swift */,
 				953A64D427EF7302003C7480 /* Assets.xcassets */,
@@ -122,6 +125,14 @@
 				953A653527EF8A0F003C7480 /* VisionAppTests.swift */,
 			);
 			path = VisionAppTests;
+			sourceTree = "<group>";
+		};
+		95A9334627F81F1100E46BCE /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				95A9334727F81F2400E46BCE /* ImagePicker.swift */,
+			);
+			path = helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A9334827F81F2400E46BCE /* ImagePicker.swift in Sources */,
 				953A64D327EF7300003C7480 /* ContentView.swift in Sources */,
 				953A64D127EF7300003C7480 /* VisionAppApp.swift in Sources */,
 			);
