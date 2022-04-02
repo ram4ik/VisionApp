@@ -20,9 +20,15 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            List {
-                ForEach(list, id: \.self) { item in
-                    Text(item)
+            if (list.isEmpty) {
+                VStack {
+                    Text("Happy path doesn't happen, please try again")
+                }
+            } else {
+                List {
+                    ForEach(list, id: \.self) { item in
+                        Text(item)
+                    }
                 }
             }
             VStack {
