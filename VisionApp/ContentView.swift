@@ -18,9 +18,11 @@ struct ContentView: View {
     @State var uiimage: UIImage? = nil
     @State var showingImagePicker = false
     
+    @State var userPhotoWithPoorQualityOrMissing = true
+    
     var body: some View {
         ZStack {
-            if (list.isEmpty) {
+            if (list.isEmpty || userPhotoWithPoorQualityOrMissing) {
                 VStack {
                     Text("Happy path doesn't happen, please try again")
                 }
@@ -60,7 +62,7 @@ struct ContentView: View {
             
             sdk.getRecognizedText(image: UIImage(named: "1")!)
             
-            sdk.getRecognizedHuman(image: UIImage(named: "1")!)
+            userPhotoWithPoorQualityOrMissing = sdk.getRecognizedHuman(image: UIImage(named: "1")!)
         }
     }
     
